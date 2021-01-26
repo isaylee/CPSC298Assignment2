@@ -18,9 +18,8 @@ void input(float &feet, float &inches)
 
 float feetInchesToMetersCm(float feet, float inches, float &meters, float &cm)
 {
-  float totalMeters = (feet * 0.3048) + ((inches * 0.3048 * 12) / 100);
-  meters = (int)totalMeters;
-  cm = (totalMeters - meters) * 100;
+  meters = (feet * 0.3048) + ((inches * 0.3048 * 12) / 100);
+  cm = meters * 100;
 }
 
 void output(float &feet, float &inches, float & meters, float &cm)
